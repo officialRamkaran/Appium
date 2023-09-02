@@ -21,7 +21,7 @@ public class AppTest
     /**
      * Rigorous Test :-)
      */
-    AndroidDriver driver;
+    IOSDriver driver;
     String mHost="http://127.0.0.1:4723/wd/hub";
     @BeforeClass
     public void setup() throws MalformedURLException {
@@ -34,7 +34,7 @@ public class AppTest
         iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPod touch (7th generation)");
         iosCapabilities.setCapability("isHeadless", true);
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/TestApp-iphonesimulator.app");
-        driver= new AndroidDriver(new URL(mHost), iosCapabilities);
+        driver= new IOSDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
 
     }

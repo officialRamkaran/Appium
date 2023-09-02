@@ -1,10 +1,7 @@
-package org.example;
+package com.app;
 
-
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,16 +10,12 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-{
+public class AppTest {
     /**
      * Rigorous Test :-)
      */
     IOSDriver driver;
-    String mHost="http://127.0.0.1:4723";
+    String mHost="http://127.0.0.1:4723/wd/hub";
     @BeforeClass
     public void setup() throws MalformedURLException {
         System.out.println("<<<<<<<<<<< try to setup >>>>>>>>>>>>>>>>>>>>>");

@@ -22,10 +22,8 @@ public class AppTest {
         DesiredCapabilities iosCapabilities = new DesiredCapabilities();
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
         iosCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-//        iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
-//        iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.2");
-        iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPod touch (7th generation)");
-        iosCapabilities.setCapability("isHeadless", true);
+        iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
+        iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.2");
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/TestApp-iphonesimulator.app");
         driver= new IOSDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");

@@ -1,6 +1,7 @@
 package org.example;
 
 
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.WebDriver;
@@ -20,17 +21,20 @@ public class AppTest
     /**
      * Rigorous Test :-)
      */
-    WebDriver driver;
-    String mHost="http://localhost:4723/we/hub";
+    AndroidDriver driver;
+    String mHost="http://127.0.0.1:4723/wd/hub";
     @BeforeClass
     public void setup() throws MalformedURLException {
         System.out.println("<<<<<<<<<<< try to setup >>>>>>>>>>>>>>>>>>>>>");
         DesiredCapabilities iosCapabilities = new DesiredCapabilities();
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
         iosCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-        iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
+//        iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
+//        iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.2");
+        iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPod touch (7th generation)");
+        iosCapabilities.setCapability("isHeadless", true);
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/TestApp-iphonesimulator.app");
-        driver= new IOSDriver(new URL(mHost), iosCapabilities);
+        driver= new AndroidDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
 
     }

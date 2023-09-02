@@ -21,7 +21,7 @@ jobs:
         appium &>/dev/null &
 
     - name: Run Test
-      run: mvn clean test -Pios
+      run: ./gradlew test --info
     - name: Upload test report
       uses: actions/upload-artifact@v2
       with:

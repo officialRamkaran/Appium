@@ -15,7 +15,7 @@ public class AppTest {
      * Rigorous Test :-)
      */
     IOSDriver driver;
-    String mHost="http://127.0.0.1:4723";
+    String mHost="http://localhost:4723";
     @BeforeClass
     public void setup() throws MalformedURLException {
         System.out.println("<<<<<<<<<<< try to setup >>>>>>>>>>>>>>>>>>>>>");

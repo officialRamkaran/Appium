@@ -34,7 +34,9 @@ jobs:
         appium &>/dev/null &
 
     - name: Run Test
-      run: ./gradlew test --info
+      run: |
+         appium driver list --installed
+         ./gradlew test --info
     - name: Upload test report
       uses: actions/upload-artifact@v2
       with:
